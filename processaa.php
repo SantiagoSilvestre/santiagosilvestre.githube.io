@@ -1,10 +1,14 @@
+<?php
+
+
+
 if(isset($_POST['name']) && !empty($_POST['name'])){
 
 $nome = addslashes( $_POST['name']);
 $email = addslashes( $_POST['email']);
 $mensagem = addslashes( $_POST['message']);
 
-$to = "dramariatatianesilvestre@gmail.com";
+$to = "dramariasilvestre@gmail.com";
 $subject = "Contato Dra Tati site";
 $body =  "Nome: ".$nome. "\r\n"
          ."Email: ".$email. "\r\n"
@@ -20,10 +24,5 @@ if(mail($to, $subject, $body, $header)){
 }else {
     echo 'Email não pode ser enviado';
 }
-if(isset($to)){
-    echo 'existe';
-}
 
-} else {
-    echo 'erro';
-}
+} 
